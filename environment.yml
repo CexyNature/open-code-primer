@@ -1,0 +1,9 @@
+name: open-code-primer
+channels:
+  - conda-forge
+dependencies:
+  - python<3.13
+  - jupyter-book
+  - jupyterlab
+  - sphinx-pythia-theme
+  - pip
