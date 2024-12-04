@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this Open Code Primer, please cite it as below"
+authors:
+    - family-names: Palotes
+      given-names: Pedro
+      orcid:
+      website:
+    - family-names: Doe
+      given-names: Jane
+      orcid:
+      website:
+title: "SORTEE's Open Code Primer"
+abstract: "A collaborative framework offering guidelines and principles to foster open coding practices among researchers in Ecology and Evolutionary Biology."   
