@@ -35,4 +35,4 @@ jobs:
           path: "_build/html"
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/github-pages-deploy@v2
+        uses: actions/deploy-pages@v2
