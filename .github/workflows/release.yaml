@@ -1,0 +1,53 @@
+name: Automatic Release
+
+on:
+  push:
+    tags:
+      - "v*" # Trigger workflow on tags starting with 'v'
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python environment (for changelog generation if needed)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      # Generate a changelog of changes since the last release
+      - name: Generate changelog
+        id: changelog
+        run: |
+          # Get the previous tag
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "None")
+
+          if [ "$PREV_TAG" != "None" ]; then
+            echo "Generating changelog between $PREV_TAG and $GITHUB_REF"
+            git log "$PREV_TAG"..HEAD --oneline > changelog.txt
+          else
+            echo "First release, no previous changelog." > changelog.txt
+          fi
+
+          cat changelog.txt
+
+          # Pass the changelog to the next step
+          echo "::set-output name=changes::$(cat changelog.txt | jq -Rsa .)"
+
+      # Create a GitHub release
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          body: ${{ steps.changelog.outputs.changes }}
+          draft: false
+          prerelease: false
