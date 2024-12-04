@@ -7,24 +7,17 @@ on:
 
 jobs:
   release:
-    name: Create Release
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-      packages: write
-    runs-on: ubuntu-latest
-
     steps:
-      # Checkout the code
       - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Set up Python environment (if changelog needs Python tools)
+        uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-
-      # Determine if the tag is a pre-release
       - name: Determine if pre-release
         id: pre_release_check
         run: |
@@ -35,8 +28,6 @@ jobs:
             echo "Release detected: ${GITHUB_REF_NAME}"
             echo "::set-output name=is_prerelease::false"
           fi
-
-      # Generate changelog
       - name: Generate changelog
         id: changelog
         run: |
@@ -51,9 +42,7 @@ jobs:
 
           cat changelog.txt
           echo "::set-output name=changes::$(cat changelog.txt | jq -Rsa .)"
-
-      # Create GitHub release
-      - name: Create GitHub Release
+      - name: Create Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
