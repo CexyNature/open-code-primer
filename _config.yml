@@ -8,7 +8,7 @@ copyright: "2024"
 
 execute:
   execute_notebooks: no
-  timeout: 3600  # one hour run time
+  timeout: 3600 # one hour run time
   allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
 
 # Add a few extensions to help with parsing content
@@ -25,7 +25,7 @@ parse:
     - substitution
 
 bibtex_bibfiles:
-    - references.bib
+  - references.bib
 
 sphinx:
   config:
