@@ -10,7 +10,7 @@ jobs:
     name: Create Release
     permissions:
       contents: write
-      actions: write
+      packages: write
     runs-on: ubuntu-latest
 
     steps:
