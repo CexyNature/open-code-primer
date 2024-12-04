@@ -30,8 +30,9 @@ jobs:
         run: |
           jupyter-book build .
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
+          name: artifact
           path: "_build/html"
       - name: Deploy to GitHub Pages
         id: deployment
