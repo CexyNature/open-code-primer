@@ -3,7 +3,7 @@ name: Automatic Release
 on:
   push:
     tags:
-      - "v*" # Trigger workflow on tags starting with 'v'
+      - "v*" # Trigger on tags starting with 'v'
 
 jobs:
   release:
@@ -15,17 +15,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Python environment (for changelog generation if needed)
+      # Set up Python environment (if changelog needs Python tools)
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      # Generate a changelog of changes since the last release
+      # Determine if the tag is a pre-release
+      - name: Determine if pre-release
+        id: pre_release_check
+        run: |
+          if [[ "${GITHUB_REF_NAME}" == *-* ]]; then
+            echo "Pre-release detected: ${GITHUB_REF_NAME}"
+            echo "::set-output name=is_prerelease::true"
+          else
+            echo "Release detected: ${GITHUB_REF_NAME}"
+            echo "::set-output name=is_prerelease::false"
+          fi
+
+      # Generate changelog
       - name: Generate changelog
         id: changelog
         run: |
-          # Get the previous tag
           PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "None")
 
           if [ "$PREV_TAG" != "None" ]; then
@@ -36,11 +47,9 @@ jobs:
           fi
 
           cat changelog.txt
-
-          # Pass the changelog to the next step
           echo "::set-output name=changes::$(cat changelog.txt | jq -Rsa .)"
 
-      # Create a GitHub release
+      # Create GitHub release
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
@@ -50,4 +59,4 @@ jobs:
           release_name: Release ${{ github.ref_name }}
           body: ${{ steps.changelog.outputs.changes }}
           draft: false
-          prerelease: false
+          prerelease: ${{ steps.pre_release_check.outputs.is_prerelease }}
