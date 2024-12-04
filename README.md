@@ -1,4 +1,4 @@
-<img src="src/sortee-logo.png" alt="Thumbnail for Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology" width="300">
+<img src="src/sortee-logo.png" alt="Thumbnail for Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology" width="300"/>
 
 # SORTEE's Open Code Primer
 
