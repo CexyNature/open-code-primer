@@ -6,6 +6,42 @@
 
 ## Motivation
 
+Biologists and ecologists face unique challenges when striving to adopt open coding practices. These obstacles highlight the need for a clear, structured, and community-driven Code Primer to empower researchers and foster best practices. Key challenges include:
+
+- Navigating Standards:
+
+The field lacks unified standards, or alternatively, offers an overwhelming variety of conflicting guidelines. This creates confusion about which practices to adopt.
+
+- Balance Between Specificity and Generality:
+
+Step-by-step guides are often too narrowly tailored, making them irrelevant to diverse projects, while broad guidance can lack the actionable detail researchers need.
+
+- Data and Code Integration:
+
+Eco-evolutionary research involves datasets ranging from large, standardized databases to highly ad-hoc, small datasets. Each presents unique challenges in storage, formatting, and linking to the code that processes them.
+
+- Overwhelming Documentation:
+
+Government datasets, though valuable, often come with excessive and complex documentation, making them difficult to navigate effectively.
+
+- Data Sensitivity:
+
+Ensuring appropriate handling of sensitive data remains a significant hurdle for open coding and data sharing.
+
+- Streamlined Best Practices:
+
+Researchers often struggle to balance simplicity with rigor, desiring workflows that are streamlined yet adhere to proper best practices without overwhelming users.
+
+- Lack of Training:
+
+Many biologists and ecologists lack formal training in coding and data analysis, leaving them unprepared to tackle modern computational challenges.
+
+- Fostering Healthy Debate:
+
+The field needs to revive a culture of constructive scientific debate. Fear of criticism or appearing negative can stifle the exchange of ideas crucial for refining methodologies and driving innovation.
+
+By addressing these challenges, a Code Primer can serve as a bridge, offering actionable, accessible, and well-rounded guidance to researchers at all skill levels. It aims to streamline workflows, integrate best practices, and foster a collaborative, debate-driven scientific community.
+
 ## Authors
 
 ## Contributors
