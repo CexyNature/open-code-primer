@@ -44,6 +44,6 @@ jobs:
           cat changelog.txt
           echo "::set-output name=changes::$(cat changelog.txt | jq -Rsa .)"
       - name: Create Release
-        run: gh release create --title "Release ${{ github.ref_name }}" --notes "${{ steps.changelog.outputs.changes }}" --prerelease ${{ steps.pre_release_check.outputs.is_prerelease }}
+        run: gh release create ${{ github.ref_name }} --title "Release ${{ github.ref_name }}" --notes ${{ steps.changelog.outputs.changes }} --prerelease ${{ steps.pre_release_check.outputs.is_prerelease }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
