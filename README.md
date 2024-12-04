@@ -2,6 +2,8 @@
 
 # SORTEE's Open Code Primer
 
+[![Automatic Release](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml/badge.svg?branch=main&event=release)](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml)
+
 ## Motivation
 
 ## Authors
