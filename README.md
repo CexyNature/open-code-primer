@@ -2,7 +2,9 @@
 
 # SORTEE's Open Code Primer
 
-[![Automatic Release](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml/badge.svg?branch=main&event=release)](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml)
+[![publish-primer](https://github.com/CexyNature/open-code-primer/actions/workflows/publish-primer.yaml/badge.svg?branch=main)](https://github.com/CexyNature/open-code-primer/actions/workflows/publish-primer.yaml)
+[![Add contributors](https://github.com/CexyNature/open-code-primer/actions/workflows/contributors.yaml/badge.svg?branch=main)](https://github.com/CexyNature/open-code-primer/actions/workflows/contributors.yaml)
+[![Automatic Release](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml/badge.svg)](https://github.com/CexyNature/open-code-primer/actions/workflows/release.yaml)
 
 ## Motivation
 
