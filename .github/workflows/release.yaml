@@ -27,10 +27,10 @@ jobs:
         run: |
           if [[ "${GITHUB_REF_NAME}" == *-* ]]; then
             echo "Pre-release detected: ${GITHUB_REF_NAME}"
-            echo "::set-output name=is_prerelease::true"
+            echo "::set-output name=is_prerelease::--prerelease"
           else
             echo "Release detected: ${GITHUB_REF_NAME}"
-            echo "::set-output name=is_prerelease::false"
+            echo "::set-output name=is_prerelease::"
           fi
 
       - name: Generate changelog
@@ -53,6 +53,6 @@ jobs:
           gh release create ${{ github.ref_name }} \
           --title "Release ${{ github.ref_name }}" \
           --notes ${{ steps.changelog.outputs.changes }} \
-          --prerelease ${{ steps.pre_release_check.outputs.is_prerelease }}
+          ${{ steps.pre_release_check.outputs.is_prerelease }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
