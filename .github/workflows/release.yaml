@@ -52,6 +52,6 @@ jobs:
         run: gh release create ${{ github.ref_name }} \
           --title "Release ${{ github.ref_name }}" \
           --notes "${CHANGES}" \
-          --prerelease "${IS_PRERELEASE}"
+          --prerelease
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

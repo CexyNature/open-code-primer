@@ -4,6 +4,9 @@ parts:
   - caption: Preamble
     chapters:
       - file: notebooks/how-to-cite
+      - file: CONTRIBUTING.md
+      - file: notebooks/authorship.md
+      - file: notebooks/acknowledgements.md
   - caption: Introduction
     chapters:
       - file: notebooks/introduction
