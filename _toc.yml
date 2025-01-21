@@ -19,7 +19,7 @@ parts:
       - file: notebooks/version-control
       - file: notebooks/working-with-data
       - file: notebooks/virtual-environments
-  - caption: Coding
+  - caption: Coding Foundations
     chapters:
       - file: notebooks/coding-style
       - file: notebooks/debugging
@@ -31,8 +31,6 @@ parts:
     chapters:
       - file: notebooks/collaboration
       - file: notebooks/code-review
-      - file: notebooks/communication
-      - file: notebooks/remote-work
   - caption: Publishing
     chapters:
       - file: notebooks/publishing
@@ -42,3 +40,12 @@ parts:
   - caption: Conclusion
     chapters:
       - file: notebooks/conclusion
+  - caption: References
+    chapters:
+      - file: references
+  - caption: Appendices
+    chapters:
+      - file: notebooks/glossary
+      - file: notebooks/resources
+      - file: notebooks/faq
+      - file: notebooks/appendix

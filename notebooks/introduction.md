@@ -11,3 +11,6 @@ For the purpose of this primer, and in many scientific domains, all code is cons
 That said, the "single script" or "collection of scripts" paradigm still has its place. Many scientists can address their research questions by implementing equations, statistical analyses, or various functions in a few scripts that reliably produce the desired outcomes. In such cases, a straightforward coding approach may be entirely sufficient. However, we encourage readers to reflect on which pieces of code have the potential to evolve into software—potentially increasing their dissemination and usefulness to a broader audience.
 
 The following articles provide insightful discussions on the complexities of code and software in science and offer recommendations for improving current practices.
+
+- Software in science is ubiquitous yet overlooked by {cite}`Hocquet2024software`
+- Ten computer codes that transformed science by {cite}`Perkel2021codes10`
