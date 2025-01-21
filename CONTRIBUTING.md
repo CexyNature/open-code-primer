@@ -9,11 +9,22 @@ Principles and mechanisms described on [SORTEE's Code of Conduct](https://www.so
 ## Roles and Mechanisms for contributing
 
 - Asking question (via GitHub Issues)
-- Report bugs, typos, incosistencies, etc
-- Fix bugs and typos
-- Request new features or content
+- Report bugs, typos, inconsistencies, etc (via GitHub Issues)
+- Fix bugs and typos (via GitHub Issues)
+- Request new features or suggest content (via GitHub Issues)
+- Create media for complementing content
+- Writing and editing content (via GitHub contributions such as Pull Request and Issues)
+- Translating content to other languages
 
 ## How this repository and book are updated
+
+The preferred method of contributing new content or amending existing content is via a GitHub Pull Request (PR). Every time a PR is accepted by the repository maintainers a GitHub workflow will run automatically performing three actions:
+
+1. Updating the code base including the new content
+2. Adding the author of the Pull Request to the list of contributors
+3. Publishing updated repository to the hosting server (currently GitHub pages)
+
+This automated process seeks to reduce the load on repository maintainers. Contributors can use the content of this book for preparing their contributions.
 
 ### Contributing to the code base
 

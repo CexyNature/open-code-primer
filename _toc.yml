@@ -10,3 +10,35 @@ parts:
   - caption: Introduction
     chapters:
       - file: notebooks/introduction
+      - file: notebooks/overview
+  - caption: Getting Started
+    chapters:
+      - file: notebooks/programming-languages
+      - file: notebooks/setting-up
+      - file: notebooks/ide
+      - file: notebooks/version-control
+      - file: notebooks/working-with-data
+      - file: notebooks/virtual-environments
+  - caption: Coding
+    chapters:
+      - file: notebooks/coding-style
+      - file: notebooks/debugging
+      - file: notebooks/testing
+      - file: notebooks/documentation
+      - file: notebooks/optimization
+      - file: notebooks/automation
+  - caption: Collaboration
+    chapters:
+      - file: notebooks/collaboration
+      - file: notebooks/code-review
+      - file: notebooks/communication
+      - file: notebooks/remote-work
+  - caption: Publishing
+    chapters:
+      - file: notebooks/publishing
+      - file: notebooks/licensing
+      - file: notebooks/maintenance
+      - file: notebooks/doi
+  - caption: Conclusion
+    chapters:
+      - file: notebooks/conclusion
