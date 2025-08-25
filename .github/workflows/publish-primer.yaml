@@ -32,7 +32,7 @@ jobs:
           jupyter-book build .
       - name: Upload artifacts
         id: deployment
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "_build/html"
   deploy:
